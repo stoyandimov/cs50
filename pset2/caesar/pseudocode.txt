@@ -1,0 +1,21 @@
+If k is NOT a number or is NOT between 1 and 25 then
+  show a usage message
+Propmpt user for ciphertext (ct)
+If ct length is 0 then
+  prompt again
+else
+  iterate over each character
+    if char is a letter then
+      if letter is capital then
+        if char + k is higher than Z
+          display char + k - Z + A - 1
+        else
+          display char + k
+      else
+        if char + k is higher than z
+          display char + k - Z + A - 1
+        else
+          display char + k - z + a - 1
+    else
+      display char
+
