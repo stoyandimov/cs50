@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h4>Survey Submissions</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>School Year</th>
+            </tr>
+        </thead>
+        <tbody>{{ html_rows|safe }}</tbody>
+    </table>
+
+
+{% endblock %}
