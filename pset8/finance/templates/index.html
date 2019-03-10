@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ html|safe }}
+            <tr>
+                <td>Cash</td>
+                <td colspan="3"></td>
+                <td>${{ "{0:.2f}".format(own_cash) }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td><strong>${{ "{0:.2f}".format(own_cash + total) }}</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
